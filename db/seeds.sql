@@ -13,5 +13,5 @@ INSERT INTO burgers (burger_name, devoured) VALUES ('Hawaiian Burger', false);
 
 -- wherever require, the item is exported
 
-//passing the function as an argument
+-- //passing the function as an argument
 
