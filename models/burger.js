@@ -1,4 +1,4 @@
-var orm = require('./config/orm.js');
+var orm = require('../config/orm.js');
 
 
 var burger = {
@@ -19,12 +19,12 @@ var burger = {
 		});
 	}
 
-
-	<form action="cats/update/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="sleepy" value="true">
-          <button type="submit">SLEEP TIME!</button>
-        </form>
 };
+// 	<form action="cats/update/{{this.id}}?_method=PUT" method="POST">
+//           <input type="hidden" name="sleepy" value="true">
+//           <button type="submit">SLEEP TIME!</button>
+//         </form>
+// };
 
 //export the name of the variable burger
 module.exports = burger;
