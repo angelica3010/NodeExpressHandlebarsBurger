@@ -1,52 +1,73 @@
 <h1>Eat-Da-Burger!</h1>
 
-<h2>Burgers that are not devoured!</h2>
+<div id = "container2">
+<!-- 
+  <div id = "container1"> -->
 
-<ul>
-  {{#each burgers}}
-    {{#unless this.burgers}}
-      <li>
-        {{this.burger_name}}
+    <h2>Burgers that are devoured!</h2>
 
-        <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="devoured" value="true">
-          <button type="submit">Devour it!</button>
-        </form>
-      </li>
-    {{/unless}}
-  {{/each}}
-</ul>
+      <!-- left side of the page -->
+      <div id ="devoured">
+        <ul>
+          {{#each burgers}}
+            {{#if this.devoured}}
+              <li>
+                {{this.burger_name}}
 
-<h2>Burgers that are devoured!</h2>
+                <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+                  <input type="hidden" name="devoured" value="false">
+                  <button type="submit">Devoured</button>
+                </form>
+              </li>
+            {{/if}}
+          {{/each}}
+        </ul>
+      </div>
 
-<ul>
-  {{#each burgers}}
-    {{#if this.devoured}}
-      <li>
-        {{this.burger_name}}
+      <!-- right side of the page -->
+      <div id="notdevoured">
+        <h2>Burgers that are not devoured!</h2>
 
-        <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="devoured" value="false">
-          <button type="submit">Devoured</button>
-        </form>
-      </li>
-    {{/if}}
-  {{/each}}
-</ul>
+        <ul>
+          {{#each burgers}}
+            {{#unless this.burgers}}
+              <li>
+                {{this.burger_name}}
 
-<h2>Add a Burger</h2>
-<form class="create-update-form" action="burgers/create" method="POST">
+                <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+                  <input type="hidden" name="devoured" value="true">
+                  <button type="submit">Devour it!</button>
+                </form>
+              </li>
+            {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
 
-  <div class="form-group">
-    <label for="bu">Burger Name:</label>
-    <input type="text" id="ca" name="burger_name">
-  </div>
+<!--   </div> -->
 
-  <div class="form-group">
-    <label for="deve">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Add Burger
-  </div>
+</div>
 
-  <button type="submit">Add Burger</button>
-</form>
+<div id ="addburger">
+
+
+    <h2>Add a Burger</h2>
+    <form class="create-update-form" action="burgers/create" method="POST">
+
+      <div class="form-group">
+        <label for="bu">Burger Name:</label>
+        <input type="text" id="ca" name="burger_name">
+      </div>
+
+      <div class="form-group">
+        <label for="deve">Devoured?</label><br>
+        <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+        <input type="radio" name="devoured" value="0"> Add Burger
+      </div>
+
+      <button type="submit">Add Burger</button>
+    </form>
+ <!--  </div> -->
+</div>
+
+<!-- how to float and use css clear fix, (test: left, right, middle look at w3 schools for float stuff) -->

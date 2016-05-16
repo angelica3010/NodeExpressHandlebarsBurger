@@ -4,24 +4,86 @@ li {
   padding: 5px;
 }
 
+h1 {
+	clear: both;
+}
+
+h2 {
+	clear: both;
+	display:block;
+	width: 960px;
+
+}
+
+/*li{
+	width: 480px;
+}*/
+
+
+div {
+	display: block;
+}
+
 .label {
   font-weight: bold;
+  width: 960px;
 }
 
 .create-update-form {
   background: aqua;
-  margin: 5px;
-  padding: 5px;
+  /*margin: 0 auto;
+  padding: 5px;*/
+  width: 100%;
+  clear: left;
 }
 
 .form-group {
   margin-bottom: 5px;
+  width: 960px;
 }
-.notdevoured{
+
+#devoured{
 	float: left;
+	position: relative;
+	width: 46%;
+	clear:left;
+	
+}
+/*#notdevoured{
+	float: left;
+	left:56%;
+	position: relative;
+	width: 46%;
+	overflow: hidden;
+	clear: left;
+}*/
 
+#notdevoured {
+    float: left;
+    /*left: 56%;*/
+    position: absolute;
+    top: 79px;
+    left: 414px;
+    width: 46%;
+    overflow: hidden;
+    clear: left;
 }
 
-.devoured{
-	float: right;
+.clearfix{
+	overflow: auto;
+}
+
+#container2 {
+	clear:left;
+	float: left;
+	width: 100%;
+}
+
+#addburger{
+	    float: left;
+    /* left: 56%; */
+    position: absolute;
+    top: 363px;
+    left: 8px;
+
 }
