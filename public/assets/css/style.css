@@ -5,13 +5,13 @@ li {
 }
 
 h1 {
-	clear: both;
+	/*clear: both;*/
 }
 
 h2 {
-	clear: both;
+	/*clear: both;*/
 	display:block;
-	width: 960px;
+	/*width: 960px;*/
 
 }
 
@@ -26,7 +26,7 @@ div {
 
 .label {
   font-weight: bold;
-  width: 960px;
+  /*width: 960px;*/
 }
 
 .create-update-form {
@@ -39,7 +39,7 @@ div {
 
 .form-group {
   margin-bottom: 5px;
-  width: 960px;
+  /*width: 960px;*/
 }
 
 #devoured{
@@ -59,18 +59,19 @@ div {
 }*/
 
 #notdevoured {
-    float: left;
+    float: right;
     /*left: 56%;*/
-    position: absolute;
-    top: 79px;
-    left: 414px;
+    /*position: absolute;*/
+    /*top: 79px;*/
+    /*left: 414px;*/
     width: 46%;
-    overflow: hidden;
-    clear: left;
+    /*overflow: hidden;*/
+    /*clear: left;*/
 }
 
 .clearfix{
 	overflow: auto;
+	clear: both;
 }
 
 #container2 {
@@ -80,10 +81,15 @@ div {
 }
 
 #addburger{
-	    float: left;
+	    /*float: left;*/
     /* left: 56%; */
-    position: absolute;
-    top: 363px;
-    left: 8px;
+    /*position: absolute;*/
+    /*top: 363px;*/
+    /*left: 8px;*/
 
 }
+
+/*If  you want to build from scratch, make 4 divs and give them set heights and color for each div*/
+/*start off float and width before oyu touch left position, top left*/
+/*top, bottom, left, and right shouldn't be changed much*/
+/*margins and paddings are more important than playing wiht top, bootm, left and right*/
